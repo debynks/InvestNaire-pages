@@ -94,7 +94,7 @@
 /***/ (function(module, exports) {
 
 // Timer Plugin Start  http://hilios.github.io/jQuery.countdown/
-$('#clock').countdown('2050/10/10', function (event) {
+$('#clock').countdown('2022/01/01', function (event) {
   $('#days').html(event.strftime('%D'));
   $('#hours').html(event.strftime('%H'));
   $('#minutes').html(event.strftime('%M'));
@@ -104,7 +104,7 @@ $('[data-countdown]').each(function () {
   var $this = $(this),
       finalDate = $(this).data('countdown');
   $this.countdown(finalDate, function (event) {
-    $this.html(event.strftime('%H : %M : %S'));
+    $this.html(event.strftime('%D : %H : %M : %S'));
   });
 }); // Timer Plugin End  http://hilios.github.io/jQuery.countdown/
 // Tilt.js Plugin Start  https://gijsroge.github.io/tilt.js/
@@ -1198,3 +1198,74 @@ setTimeout(function(){
 }, time);
 
 // Preloader
+
+
+// CRYPTO CURRENY CONVERTER
+var outside = document.getElementById("body-container");
+var toPrice = document.getElementById("to-currency-price");
+var fromBasis = document.getElementById("from-basis");
+var toMenu = document.getElementById("to-menu");
+var fromMenu = document.getElementById("from-menu");
+var toSelect = document.getElementsByClassName("to-currency");
+var fromSelect = document.getElementsByClassName("from-currency");
+
+var toCurrency = "USD";
+var fromCurrency = "BTC";
+
+var retrievePrice = function() {
+    var XHR = new XMLHttpRequest();
+    
+    XHR.onreadystatechange = function(){
+      if(XHR.readyState == 4 && XHR.status == 200) {
+        var val = JSON.parse(XHR.responseText)[fromCurrency][toCurrency];
+        var price = val.toLocaleString('en');
+        toPrice.textContent = price + " " + toCurrency;
+        fromBasis.textContent = fromCurrency;
+      }
+    }
+    
+    XHR.open("GET","https://min-api.cryptocompare.com/data/pricemulti?fsyms=" + fromCurrency + "&tsyms=" + toCurrency);
+    XHR.send();
+}
+
+for(var i = 0; i < toSelect.length; i++) {
+    toSelect[i].addEventListener("click", function() {
+        toMenu.classList.remove("expand");
+        toCurrency = this.textContent;
+        retrievePrice();
+    });
+}
+
+for(var i = 0; i < fromSelect.length; i++) {
+    fromSelect[i].addEventListener("click", function() {
+        fromMenu.classList.remove("expand");
+        fromCurrency = this.textContent;
+        retrievePrice();
+    });
+}
+
+toPrice.addEventListener("click", function() {
+    if(toMenu.classList.contains("expand")) {
+        toMenu.classList.remove("expand");
+    } else {
+        toMenu.classList.add("expand");
+    }
+});
+
+fromBasis.addEventListener("click", function() {
+    if(fromMenu.classList.contains("expand")) {
+        fromMenu.classList.remove("expand");
+    } else {
+        fromMenu.classList.add("expand");
+    }
+});
+
+//Execute
+setInterval(function() {
+    retrievePrice();
+}, 10000);
+
+retrievePrice();
+
+
+// CRYPTO CURRENY CONVERTER

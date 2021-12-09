@@ -1521,6 +1521,87 @@ input:checked + .slider:before {
           animation: dot-animation 1s linear infinite;
 }
 
+
+/* Crypto Conversion */
+
+.line {
+	height: 40px;
+	width: 2px;
+	background-color: rgb(42,38,45);
+	margin-right: 10px;
+}
+
+.containercurrency {
+	width: 240px;
+	text-align: center;
+	cursor: pointer;
+}
+
+
+.containercurrency:first-child {
+	width: 150px;
+}
+.bid-main.crypt{
+	display:flex;
+	flex-direction: row;
+}
+.containercurrency h1 {
+    font-size: 150%;
+    font-weight: 600;
+    background: #ccc;
+    margin: 1rem;
+    border-radius: 2rem;
+    content: ;
+	position: relative;
+}
+#from-basis:before,#to-currency-price:before {
+    position: absolute;
+    content: "\25bc";
+    right: 3%;
+    top: 20%;
+    color: #356be2;
+    font-size: 1rem;
+}
+h1:hover {
+	color: rgb(232,187,74);
+}
+
+ul {
+	list-style: none;
+	width: 100px;
+	padding: 0;
+	margin: 5px auto 0 auto;
+	border-radius: 5px;
+	box-shadow: 0 5px 28px -10px rgba(20,20,20,0.8);
+	overflow: hidden;
+	max-height: 0;
+	transition: 220ms ease-in-out;
+}
+
+.expand {
+	max-height: 300px;
+}
+
+li {
+	padding: 5px 0;
+	border-bottom: 1px solid rgb(222,222,222);
+	transition: background 100ms;
+}
+
+li:first-child {
+	border-top: 4px solid rgb(232,187,74);
+}
+
+li:last-child {
+	border: none;
+}
+
+li:hover {
+	background-color: rgb(235,235,237);
+}
+
+
+/* Crypto Conversion */
 @-webkit-keyframes dot-animation {
   0% {
     background-color: #366CE3;
@@ -1797,7 +1878,7 @@ input:checked + .slider:before {
   align-items: center;
 }
 
-.live-auction .container-fluid .live-auction-inr .row-custom .col-otr .col-inr .time-main .heart-main .heart-otr, .live-auction .container-fluid .live-auction-inr .row-custom .col-otr .col-inr .time-main  .icon-otr {
+.live-auction .container-fluid .live-auction-inr .row-custom .col-otr .col-inr .time-main .heart-main .heart-otr, .live-auction .container-fluid .live-auction-inr .row-custom .col-otr .col-inr .time-main  .icon-otr, .hero-main-dark .container-fluid .hero-inr .row-custom .col-img-otr .col-img-inr .create-otr .heart-main, .hero-main-dark .container-fluid .hero-inr .row-custom .col-img-otr .col-img-inr .create-otr .icon-otr {
   width: 40px;
   height: 40px;
   border-radius: 100%;
@@ -4222,7 +4303,7 @@ p[data-value]:after {
 .percentage{
   height: 30px;
   max-width: 500px; 
-  border: 2px solid #69AF23;
+
   border-radius: 20px;
   font-weight: 300;
   position: absolute; 
@@ -8774,9 +8855,9 @@ p[data-value]:after {
 }
 
 .hero-single-artwork .container-fluid .hero-inr {
-  padding: 128px 0;
-  position: relative;
-  z-index: 10;
+    padding: 5rem 0;
+    position: relative;
+    z-index: 10;
 }
 
 @media (max-width: 767px) {
@@ -8786,13 +8867,13 @@ p[data-value]:after {
 }
 
 .hero-single-artwork .container-fluid .hero-inr .img-otr {
-  width: 430px;
-  height: 430px;
-  border-radius: 24px !important;
-  margin: 0 auto;
-  position: relative;
-  z-index: 10;
-  overflow: hidden;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 24px !important;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
 }
 
 @media (max-width: 575px) {
@@ -8842,12 +8923,15 @@ p[data-value]:after {
 }
 
 .hero-single-artwork .container-fluid .hero-inr .icons-div .icons-div-inr .heart-main {
-  display: inline-flex;
+  display: inline-flex;.
   align-items: center;
-  border: 1px solid #FFFFFF;
   border-radius: 190px;
 }
-
+.campaign-slide .create-inr {
+    margin-right: 2rem;
+    display: flex;
+    align-self: center;
+}
 .hero-single-artwork .container-fluid .hero-inr .icons-div .icons-div-inr .heart-main .heart-otr {
   width: 52px;
   height: 52px;
@@ -17453,7 +17537,8 @@ p {
     background-color: #366CE3;
     transition: 0.3s;
     cursor: pointer;
-	margin-left:1rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
 }
 
 .btn-fill:hover {
