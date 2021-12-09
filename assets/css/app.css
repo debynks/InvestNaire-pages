@@ -1888,13 +1888,12 @@ input:checked + .slider:before {
   display: table;
 }
 .logmod__wrapper {
-  display: block;
-  background: #FFF;
-  position: relative;
-  max-width: 550px;
-  border-radius: 4px;
-  box-shadow: 0 0 18px rgba(0, 0, 0, 0.2);
-  margin: 1rem auto;
+    display: block;
+    background: #FFF;
+    position: relative;
+    max-width: 550px;
+    border-radius: 4px;
+    margin: 1rem auto;
 }
 .logmod__close {
   display: block;
@@ -1998,61 +1997,55 @@ input:checked + .slider:before {
 }
 
 .connect {
-  overflow: hidden;
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 72px;
-  line-height: 72px;
-  text-decoration: none;
+    position: relative;
+    display: flex;
 }
-.connect::after {
-  clear: both;
-  content: "";
-  display: table;
-}
+
 .connect:focus, .connect:hover, .connect:visited {
   color: #FFF;
   text-decoration: none;
 }
-.connect__icon {
-  vertical-align: middle;
-  float: left;
-  width: 70px;
-  text-align: center;
-  font-size: 22px;
-}
+
 .connect__context {
   vertical-align: middle;
   text-align: center;
 }
 .connect.facebook {
-  background: #3b5998;
-  color: #FFF;
+
 }
 .connect.facebook a {
-  color: #FFF;
+
 }
 .connect.facebook .connect__icon {
-  background: #283d68;
+
 }
 .connect.googleplus {
-  background: #dd4b39;
-  color: #FFF;
+
 }
 .connect.googleplus a {
-  color: #FFF;
+
 }
 .connect.googleplus .connect__icon {
-  background: #b52f1f;
+
 }
 
+.logmod__alter-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.logmod__alter-container a {
+    margin: 0rem 3rem;
+}
 .simform {
   position: relative;
 }
 .simform__actions {
-  padding: 15px;
-  font-size: 14px;
+    padding: 1rem;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
 }
 .simform__actions::after {
   clear: both;
@@ -2060,14 +2053,14 @@ input:checked + .slider:before {
   display: table;
 }
 .simform__actions .sumbit {
-  height: 48px;
-  float: right;
-  color: #FFF;
-  width: 50%;
-  font-weight: 700;
-  font-size: 16px;
-  background: #4CAF50;
-  margin-top: 7px;
+    height: 48px;
+    float: right;
+    color: #FFF;
+    width: 50%;
+    font-weight: 700;
+    font-size: 16px;
+    background: #4CAF50;
+    margin-top: 1rem;
 }
 .simform__actions .sumbit::after {
   clear: both;
@@ -2075,14 +2068,25 @@ input:checked + .slider:before {
   display: table;
 }
 .simform__actions-sidetext {
-  display: inline-block;
-  float: left;
-  width: 50%;
-  padding: 0 10px;
-  margin: 9px 0 0 0;
-  color: #8C979E;
-  text-align: center;
-  line-height: 24px;
+    display: inline-block;
+    float: left;
+    width: 100%;
+    padding: 0 10px;
+    margin: .5rem 0 0 0;
+    color: #8C979E;
+    text-align: center;
+    line-height: 24px;
+}
+.logmod__tab.show h5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: .82rem;
+    margin: 1rem;
+    color: #0561F9;
+    font-weight: 700;
+    width: 100%;
 }
 .simform__actions-sidetext::after {
   clear: both;
@@ -2090,29 +2094,25 @@ input:checked + .slider:before {
   display: table;
 }
 
-.sminputs {
-  border-bottom: 1px solid #E5E5E5;
-}
+
 .sminputs::after {
   clear: both;
   content: "";
   display: table;
 }
 .sminputs .input {
-  display: block;
-  position: relative;
-  width: 50%;
-  height: 71px;
-  padding: 11px 24px;
-  border-right: 1px solid #e5e5e5;
-  border-bottom: none;
-  float: left;
-  background-color: #FFF;
-  border-radius: 0;
-  box-sizing: border-box;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 71px;
+    padding: 11px 24px;
+    border-bottom: none;
+    background-color: #FFF;
+    border-radius: 0;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 .sminputs .input.active {
   background: #eee;
@@ -2131,44 +2131,45 @@ input:checked + .slider:before {
   width: 100%;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 700;
   font-size: 12px;
   cursor: pointer;
   line-height: 24px;
 }
 .sminputs .input input {
-  postion: relative;
-  display: inline-block;
-  height: 24px;
-  font-size: 15px;
-  line-height: 19.2px;
-  color: #555;
-  border-radius: 4px;
-  vertical-align: middle;
-  box-shadow: none;
-  box-sizing: border-box;
-  width: 100%;
-  height: auto;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  background-color: transparent;
-  color: rgba(75, 89, 102, 0.85);
+    postion: relative;
+    display: inline-block;
+    height: 24px;
+    font-size: 13px;
+    line-height: 1rem;
+    color: #555;
+    border-radius: 1rem;
+    vertical-align: middle;
+    box-shadow: none;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    border: none;
+    padding: .5rem;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: rgba(75, 89, 102, 0.85);
+    width: 100%;
+    border: .1rem solid #eae7e7;
 }
 .sminputs .hide-password {
-  display: inline-block;
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 0 15px;
-  border-left: 1px solid #e4e4e4;
-  font-size: 14px;
-  background: #FFF;
-  overflow: hidden;
-  color: #444;
-  cursor: pointer;
-  margin-top: 12px;
-  line-height: 48px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 15px;
+    border-left: 1px solid #e4e4e4;
+    font-size: 14px;
+    background: #FFF;
+    overflow: hidden;
+    color: #444;
+    cursor: pointer;
+    margin-top: 12px;
+    line-height: 12px;
 }
 
 html {
@@ -2178,20 +2179,20 @@ html {
 }
 
 .btn, .simform__actions .sumbit {
-  display: inline-block;
-  line-height: normal;
-  white-space: nowrap;
-  vertical-align: middle;
-  text-align: center;
-  cursor: pointer;
-  box-sizing: border-box;
-  border: none;
-  outline: none;
-  outline-offset: 0;
-  font-weight: 400;
-  box-shadow: none;
-  min-width: 90px;
-  padding: 10px 14px;
+    display: inline-block;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    outline-offset: 0;
+    font-weight: 400;
+    box-shadow: none;
+    min-width: 16rem;
+    padding: 0;
 }
 .btn.full, .simform__actions .full.sumbit {
   width: 100%;
