@@ -10423,7 +10423,16 @@ p[data-value]:after {
 .explore-artwork-creator .container-fluid .explore-artwork-inr .row-custom-main .tab-content .row-custom-inr .col-otr {
   padding: 0 12px;
 }
-
+.explore-artwork-creator .container-fluid .explore-artwork-inr .row-custom-main .tab-content .row-custom-inr .col-otr .buyortransfer{
+	display:flex;
+	flex-direction:row;
+}
+.explore-artwork-creator .container-fluid .explore-artwork-inr .row-custom-main .tab-content .row-custom-inr .col-otr .buyortransfer .btn-fill {
+    padding: 0px 10px;
+    margin-left: 1rem;
+    margin-top: 1rem;
+	font-size: 78%;
+}
 @media (max-width: 1300px) {
   .explore-artwork-creator .container-fluid .explore-artwork-inr .row-custom-main .tab-content .row-custom-inr .col-otr {
     width: 33%;
