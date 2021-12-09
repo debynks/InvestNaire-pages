@@ -8485,7 +8485,9 @@ p[data-value]:after {
 }
 
 .hero-main-dark .container-fluid .hero-inr .row-custom .col-content-otr .col-content-inr .action-otr {
-  display: flex;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
 }
 
 @media (max-width: 1100px) {
