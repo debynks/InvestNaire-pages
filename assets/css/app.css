@@ -13621,6 +13621,10 @@ p[data-value]:after {
     width: 44px;
     height: 44px;
   }
+  .navbar-main-2 .container-fluid .navbar-inr-2 .burger-menu .logo-otr .logo-img {
+    width: 117px !important;
+    margin-top: .5rem;
+}
 }
 
 .navbar-main-2 .container-fluid .navbar-inr-2 .burger-menu .burger-icon-otr .burger-icon {
