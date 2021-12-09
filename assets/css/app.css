@@ -5723,7 +5723,9 @@ p[data-value]:after {
 /*------------------------------------------
         Live Auction's Start Here
 -------------------------------------------*/
-
+.user-profile-otr {
+    margin-top: 3rem;
+}
 .popular-collection-home2 {
   overflow: hidden;
   padding: 0 0 256px 0;
