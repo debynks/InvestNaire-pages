@@ -1553,7 +1553,7 @@ input:checked + .slider:before {
     position: relative;
     border: .15rem solid #f2f2f2;
 }
-#from-basis:before,#to-currency-price:before {
+.containercurrency #from-basis:before, .containercurrency #to-currency-price:before {
     position: absolute;
     content: "\25bc";
     right: 3%;
@@ -1561,11 +1561,11 @@ input:checked + .slider:before {
     color: #356be2;
     font-size: 1rem;
 }
-h1:hover {
+.containercurrency h1:hover {
 	color: rgb(232,187,74);
 }
 
-ul {
+.containercurrency ul {
 	list-style: none;
 	width: 100px;
 	padding: 0;
@@ -1577,25 +1577,25 @@ ul {
 	transition: 220ms ease-in-out;
 }
 
-.expand {
+.containercurrency .expand {
 	max-height: 300px;
 }
 
-li {
+.containercurrency li {
 	padding: 5px 0;
 	border-bottom: 1px solid rgb(222,222,222);
 	transition: background 100ms;
 }
 
-li:first-child {
+.containercurrency li:first-child {
 	border-top: 4px solid rgb(232,187,74);
 }
 
-li:last-child {
+.containercurrency li:last-child {
 	border: none;
 }
 
-li:hover {
+.containercurrency li:hover {
 	background-color: rgb(235,235,237);
 }
 
@@ -13621,10 +13621,7 @@ p[data-value]:after {
     width: 44px;
     height: 44px;
   }
-  .navbar-main-2 .container-fluid .navbar-inr-2 .burger-menu .logo-otr .logo-img {
-    width: 117px !important;
-    margin-top: .5rem;
-}
+  
 }
 
 .navbar-main-2 .container-fluid .navbar-inr-2 .burger-menu .burger-icon-otr .burger-icon {
