@@ -116,6 +116,49 @@ $('.img-tilt').tilt({
 }); // Tilt.js Plugin End  https://gijsroge.github.io/tilt.js/
 // Owl-carousel Plugin Start  https://owlcarousel2.github.io/OwlCarousel2/
 
+
+$('#campaign_sliders').owlCarousel({
+	  loop: false,
+	  margin: 50,
+	  dots: true,
+	  autoplay:true,
+	  autoplayTimeout:3000,
+	  autoplayHoverPause:true,
+	  nav: true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+
+$('#campaign_products').owlCarousel({
+	  loop: false,
+	  margin: 0,
+	  dots: true,
+	  autoplay:true,
+	  autoplayTimeout:3000,
+	  autoplayHoverPause:true,
+	  nav: true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+
 $('#live-auctions').owlCarousel({
   loop: true,
   margin: 24,
@@ -142,7 +185,7 @@ $('#live-auctions').owlCarousel({
     }
   }
 });
-$('#project_live-auctions').owlCarousel({
+$('#project_trending-campaigns').owlCarousel({
   loop: true,
   margin: 24,
   dots: false,

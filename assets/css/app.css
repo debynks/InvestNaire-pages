@@ -1940,6 +1940,16 @@ input:checked + .slider:before {
     font-size: 70%;
     color: #999;
 }
+
+.live-auction .container-fluid .live-auction-inr .row-custom .col-otr .col-inr .dataxplain .raisedtext {
+    background: #f2f2f2;
+    padding: .2rem 1rem;
+    border-radius: 1rem 1rem 1rem 0rem;
+	color:#00f;
+}
+.live-auction .container-fluid .live-auction-inr .row-custom .col-otr .col-inr .dataxplain .raisedtext.target {
+	color:#f00;
+}
 .live-auction .container-fluid .live-auction-inr .row-custom .col-otr .col-inr .dataxplain .raisedpercentage {
     display: flex;
     flex-direction: column;
@@ -8178,6 +8188,7 @@ p[data-value]:after {
     border-radius: 10px;
     margin-right: 72px;
     box-shadow: 1rem 1rem 5rem .2rem rgb(180, 142, 167);
+	overflow:hidden;
 }
 
 @media (max-width: 1300px) {
