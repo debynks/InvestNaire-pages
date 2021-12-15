@@ -9619,6 +9619,8 @@ color: transparent;
 
 .artwork-body .container-fluid .artwork-body-inr .row-custom .col-right-otr .col-right-inr .bid-details .action-otr .btn-bid {
   text-align: center;
+  margin: 1rem 0rem;
+
 }
 
 .artwork-body .container-fluid .artwork-body-inr .row-custom .col-right-otr .col-right-inr .activity-details {
