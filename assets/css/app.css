@@ -1915,6 +1915,7 @@ input:checked + .slider:before {
     padding: 0px 10px;
     background-color: #F2F2F2;
     border-radius: 16px;
+	margin:1rem 0rem;
 }
 
 .live-auction .container-fluid .live-auction-inr .row-custom .col-otr .col-inr .bid-main .bid {
@@ -2056,19 +2057,17 @@ margin-bottom: 1rem;
   color: #333;
 }
 .logmod__tabs li a {
-  width: 50%;
-  position: relative;
-  float: left;
-  text-align: center;
-  background: #D2D8D8;
-  line-height: 72px;
-  height: 72px;
-  text-decoration: none;
-  color: #809191;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 16px;
-  cursor: pointer;
+    width: 50%;
+    position: relative;
+    float: left;
+    text-align: center;
+    background: #D2D8D8;
+    line-height: 72px;
+    height: 72px;
+    text-decoration: none;
+    color: #809191;
+    font-size: 1.1rem;
+    cursor: pointer;
 }
 .logmod__tabs li a:focus {
   outline: dotted 1px;
@@ -2247,7 +2246,7 @@ margin-bottom: 1rem;
     font-size: 13px;
     line-height: 1rem;
     color: #555;
-    border-radius: 1rem;
+    border-radius: 3rem !important;
     vertical-align: middle;
     box-shadow: none;
     box-sizing: border-box;
@@ -2298,6 +2297,7 @@ html {
     box-shadow: none;
     min-width: 16rem;
     padding: 0;
+	border-radius: 3rem !important;
 }
 .btn.full, .simform__actions .full.sumbit {
   width: 100%;
@@ -8441,13 +8441,14 @@ button:focus {
 }
 
 .hero-main-dark .container-fluid .hero-inr .row-custom .col-img-otr .col-img-inr .create-otr .hover-box {
-  position: absolute;
-  bottom: 60px;
-  left: 0;
-  padding-bottom: 50px;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s;
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    padding-bottom: 50px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 9999;
 }
 
 @media (max-width: 991px) {
@@ -8461,6 +8462,16 @@ button:focus {
   background-color: #272727;
   border-radius: 24px;
   padding: 32px;
+}
+span.foll{
+color: #fff;
+font-size: .7rem;
+position: absolute;
+right: 2.5rem;
+top: 1rem;
+}
+.live-auction span.foll{
+color: #9c9c9c;
 }
 
 .hero-main-dark .container-fluid .hero-inr .row-custom .col-img-otr .col-img-inr .create-otr .hover-box .hover-box-inr .user-info {
@@ -8601,6 +8612,7 @@ button:focus {
 
 .hero-main-dark .container-fluid .hero-inr .row-custom .col-content-otr .col-content-inr .boxes-main .bid-main .bid {
     color: #fff;
+    white-space: pre;
 }
 
 .hero-main-dark .container-fluid .hero-inr .row-custom .col-content-otr .col-content-inr .boxes-main .auction-main {
@@ -8629,7 +8641,9 @@ button:focus {
  .p-y-3 {
      padding-bottom: 45px
  }
-
+.live-auction .container-fluid .live-auction-inr .row-custom .col-otr .col-inr .dataxplain .main_counter_area  .p-y-3 {
+     padding-bottom: 0px;
+ }
  .m-b-1 {
      margin-bottom: 18px
  }
@@ -8654,7 +8668,7 @@ div.hero-main-dark div.container-fluid div.hero-inr div.row.row-custom div.col-l
 }
 .main_counter_content > div > p {
     font-size: .9rem;
-    color: #fff;
+    color: #000;
     line-height: 1rem !important;
 }
 .main_counter_area .main_counter_content .single_counter {
@@ -8697,6 +8711,13 @@ line-height: 3rem;
 overflow: hidden;
 -webkit-text-stroke: .1rem rgba(255, 255, 255, 0.4);
 color: transparent;
+}
+.live-auction .dataxplain .main_counter_area.pt .overlay.p-y-3 .container div.row a.btn-fill.btn-create {
+    width: 14rem;
+    height: 2rem;
+    padding: 0rem .5rem;
+    text-align: center;
+    margin-top: 1rem;
 }
 .main_counter_area .main_counter_content .single_counter::before {
     content: "";
@@ -14361,7 +14382,7 @@ EL CSS DEL PEN ORIGINAL
 
 .navbar-main-2 .container-fluid .navbar-inr-2 .burger-menu .logo-otr .logo-img {
     width: 150px;
-    filter: drop-shadow(0 0 .1rem rgba(0, 0, 0,.3));
+    /* filter: drop-shadow(0 0 .1rem rgba(0, 0, 0,.3)); */
 }
 
 .navbar-main-2 .container-fluid .navbar-inr-2 .input-main {
@@ -14480,7 +14501,6 @@ EL CSS DEL PEN ORIGINAL
   display: inline-flex;
   color: #999999;
   transition: 0.3s;
-  text-transform: lowercase;
 }
 
 .navbar-main-2 .container-fluid .navbar-inr-2 .navigation-otr .navigation-inr .nav-li .dropdown-otr .dropdown-li .dropdown-a:hover {
@@ -14753,7 +14773,27 @@ EL CSS DEL PEN ORIGINAL
   transition: 0.3s;
   cursor: pointer;
 }
-
+.navbar-main-2 .container-fluid .navbar-inr-2 .action-otr .icon-inr::before {
+    position: absolute;
+    right: auto;
+    height: 3.5rem;
+    content: "Please Log in to see your Portfolio";
+    width: 14rem;
+    opacity: 0;
+    transition: 1s ease;
+    left: 1.5rem;
+    background: #f7f7f7;
+    padding: 1rem;
+    bottom: -3rem;
+    font-size: 75%;
+    border-radius: 0rem .5rem .5rem .5rem;
+    box-shadow: 0rem 0rem 3rem rgba(2, 2, 2, 0.18);
+    z-index: 999;
+	font-family: "DMSans-Bold";
+}
+.navbar-main-2 .container-fluid .navbar-inr-2 .action-otr .icon-inr:hover:before{
+opacity:1;
+}
 @media (max-width: 420px) {
   .navbar-main-2 .container-fluid .navbar-inr-2 .action-otr .bell-icon-otr .icon-inr {
     width: 44px;
@@ -14772,17 +14812,18 @@ EL CSS DEL PEN ORIGINAL
 }
 
 .navbar-main-2 .container-fluid .navbar-inr-2 .action-otr .bell-icon-otr .icon-hover {
-  position: absolute;
-  z-index: 999;
-  right: 0;
-  background-color: #FFFFFF;
-  width: 370px;
-  border-radius: 24px;
-  padding: 20px 28px 24px 28px;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s;
-  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 999;
+    right: 0;
+    background-color: #FFFFFF;
+    width: 370px;
+    border-radius: 24px;
+    padding: 20px 28px 24px 28px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);
+    font-family: "DMSans-Bold" !important;
 }
 
 @media (max-width: 575px) {
