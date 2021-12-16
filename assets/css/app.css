@@ -140,7 +140,7 @@
 .overlay-content-otr .modal-content-custom .overlay-content {
   padding: 30px;
   position: relative;
-  width: 100%;
+  width: 100vw;
 }
 
 .overlay-content-otr .modal-content-custom .overlay-content .icon-close {
@@ -173,8 +173,9 @@
 }
 
 .overlay-content-otr .modal-content-custom .overlay-content .input-main .input {
-  width: 100%;
-  padding-right: 52px;
+    width: 100%;
+    padding-right: 0px;
+    border-radius: 3rem !important;
 }
 
 .overlay-content-otr .modal-content-custom .overlay-content .input-main .search-icon {
@@ -14387,6 +14388,31 @@ EL CSS DEL PEN ORIGINAL
     /* filter: drop-shadow(0 0 .1rem rgba(0, 0, 0,.3)); */
 }
 
+@media (max-width: 480px) {
+ .navbar-main-2 .container-fluid .navbar-inr-2 .burger-menu .logo-otr .logo-img {
+    width: 7rem;
+    /* filter: drop-shadow(0 0 .1rem rgba(0, 0, 0,.3)); */
+}
+.overlay-content .navigation-otr .navigation-inr .nav-li .btn-fill.btn-create{
+	width: 7rem;
+	margin-left: 0;
+}
+
+.logo-otr {
+    margin-left: 3rem;
+}
+.action-otr .bell-icon-otr {
+    margin: 0 3rem 0 0;
+}
+.theme-switch-wrapper {
+    width: 120px;
+    position: absolute;
+    top: 6rem;
+    z-index: 9;
+    right: -5rem;
+}
+}
+
 .navbar-main-2 .container-fluid .navbar-inr-2 .input-main {
   position: relative;
 }
@@ -14759,7 +14785,7 @@ EL CSS DEL PEN ORIGINAL
 
 @media (max-width: 991px) {
   .navbar-main-2 .container-fluid .navbar-inr-2 .action-otr .bell-icon-otr {
-    margin: 0 24px 0 0;
+    margin: 0 3rem 0 0;
   }
 }
 
